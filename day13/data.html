@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table,tr,td{
+            border:2px solid black;
+            background-color: antiquewhite;
+            font-size: large;
+            font-weight: 500;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption> INFO </caption>
+        <tr>
+            <td>First Name</td>
+            <td id="fname"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td id="lname"></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td id="uname"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td id="pwd"></td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td id="mob"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Dob</td>
+            <td id="dob"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td id="address"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="gender"></td>
+        </tr>
+        <tr>
+            <td>qualification</td>
+            <td id="qualification"></td>
+        </tr>
+        <tr>
+            <td>skillset</td>
+            <td id="skillset"></td>
+        </tr>
+        
+
+    </table>
+
+    <script>
+        let x = JSON.parse(localStorage.getItem("data"));
+        let firstName = document.getElementById('fname');
+        let lastName = document.getElementById('lname');
+        let username = document.getElementById('uname');
+        let password = document.getElementById('pwd');
+        let mobile = document.getElementById('mob');
+        let email = document.getElementById('email');
+        let dob = document.getElementById('dob');
+        let address = document.getElementById('address');
+        let gender = document.getElementById('gender');
+        let qualification = document.getElementById('qualification');
+        let skillset = document.getElementById('skillset');
+
+        firstName.innerText = x.fname;
+        lastName.innerText = x.lname;
+        username.innerText = x.username;
+        password.innerText = x.password;
+        mobile.innerText = x.mobile;
+        email.innerText = x.email;
+        dob.innerText = x.dob;
+        address.innerText = x.address;
+        gender.innerText = x.gender;
+        qualification.innerText = x.qualification;
+        skillset.innerText = x.skillset.toString();
+    
+
+    </script>
+</body>
+</html>
